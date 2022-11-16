@@ -21,10 +21,6 @@ body{
     height: 100vh;
 }
 
-body.active{
-    overflow: hidden;
-}
-
 header{
     padding: 2rem 3rem 2rem;
     color: hsl(0, 0%, 41%);
@@ -48,7 +44,7 @@ header > nav{
 }
 
 #logo{
-    width: 100px;
+    width: 120px;
 }
 
 ul{
@@ -166,7 +162,7 @@ header a{
 #register{
     padding: 0.7rem 1.2rem;
     border: 1px solid hsl(0, 0%, 41%);
-    border-radius: 15px;
+    border-radius: 11px;
 }
 
 #register:hover{
@@ -240,7 +236,7 @@ header a{
     display: flex;
     padding: 1.5rem 7rem 0rem 5rem;
     position: relative;
-    gap: 50px;
+    gap: 60px;
 }
 
 #sec00{
@@ -250,16 +246,16 @@ header a{
 }
 
 #sec01{
-    padding: 6rem 3rem 0rem 3rem;
+    padding: 6rem 0rem 0rem 3rem;
 }
 
 #sec01 > h1{
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 #sec01 > p{
     max-width: 350px;
-    padding: 3rem 2rem 3rem 0rem;
+    padding: 3rem 0rem;
     text-align: justify;
     color: hsl(0, 0%, 41%);
     font-size: 1rem;
@@ -272,7 +268,7 @@ header a{
     background-color: hsl(0, 0%, 8%);
     color: white;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1rem;
     border-radius: 12px;
 }
 
@@ -283,13 +279,13 @@ header a{
 }
 
 #sec01 > ul{
-    max-width: 400px;
+    max-width: 450px;
     position: absolute;
     bottom: 0px;
 }
 
 #sec02{
-    max-width: 450px;
+    max-width: 470px;
 }
 
 
@@ -376,7 +372,7 @@ header a{
     .active #nav-links{
         display: block;
         position: fixed;
-        padding: 4.5rem 1.5rem 1rem 1.5rem;
+        padding: 0rem 1.5rem;
         width: 220px;
         height: 100vh;
         right: 0px;
@@ -386,6 +382,10 @@ header a{
         box-sizing: border-box;
         animation: anim-transform 0.4s forwards ease-out;
         transform: translate(100%);
+    }
+
+    .active #nav-links ul{
+        padding-top: 5rem;
     }
 
     @keyframes anim-transform {
@@ -420,6 +420,10 @@ header a{
     #register {
         display: block;
         box-sizing: border-box;
+    }
+
+    body.active{
+        overflow: hidden;
     }
 
 
