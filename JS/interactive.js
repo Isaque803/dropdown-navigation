@@ -4,6 +4,6 @@ function dropdown(i){
 }
 
 function menuInteractive(){
-    let element = document.getElementsByTagName("header")[0]
+    let element = document.getElementsByTagName("body")[0]
     element.classList.toggle("active")
 }
