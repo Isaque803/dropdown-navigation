@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+li, a{
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Epilogue', sans-serif;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    font-family: 'Epilogue', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+    overflow: hidden;
+    height: 100vh;
+}
+
+header{
+    padding: 1rem 3rem 2rem;
+    color: hsl(0, 0%, 41%);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+header > nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: center;
+}
+
+#nav-links{
+    width: 100%;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 80px;
+}
+
+ul{
+    display: flex;
+    gap: 30px;
+}
+
+header a{
+    color: hsl(0, 0%, 41%);
+}
+
+.dropdown span{
+    padding-left: 0.5rem;
+}
+
+.nav-menu, .dropdown{
+    padding: 0.5rem;
+}
+
+.nav-menu a{
+    padding: 0.5rem 0rem;
+}
+
+.nav-menu:hover a, .dropdown:hover p, .dropdown li:hover a{
+    color:hsl(0, 0%, 8%);
+}
+
+.dropdown li{
+    font-weight: 500;
+}
+
+.dropdown{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    gap: 5px;
+}
+
+.dropdown span img{
+    width: 10px;
+}
+
+.dropdown.active{
+    color: hsl(0, 0%, 8%);
+}
+
+.dropdown.active span img{
+    transform: rotate(-180deg);
+}
+
+#features{
+    display: none;
+}
+
+.dropdown.active #features{
+    display: block;
+    background-color: white;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+    top: 40px;
+    left: -60px;
+    position: absolute;
+    padding: 1.2rem 1.4rem;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+#features::after, #company::after{
+    content:"";
+    position: absolute;
+    border-color: transparent transparent rgb(255, 255, 255) transparent;
+    border-style: solid;
+    border-width: 12px;
+    top: -23px;
+}
+
+#features::after{
+    right: 35px;   
+}
+
+#company::after{
+    left: 20px; 
+}
+
+#features li{
+    line-height: 1.6rem;
+}
+
+#company{
+    display: none;
+}
+
+.dropdown.active #company{
+    width: 60px;
+    display: block;
+    background-color: white;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+    top: 40px;
+    left: 0px;
+    position: absolute;
+    padding: 1.2rem 1.4rem;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+#company li{
+    line-height: 1.6rem;
+}
+
+.icon{
+    width: 11px;
+    margin-right: 0.6rem;
+}
+
+
+#register{
+    padding: 0.7rem 1rem;
+    border: 1px solid hsl(0, 0%, 41%);
+    border-radius: 15px;
+}
+
+#register:hover{
+    border-color: hsl(0, 0%, 8%);
+}
+
+#menu-hamburger{
+    display: none;
+    width: 44px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#menu-hamburger span{
+    width: 44px;
+    height: 4px;
+    position: relative;
+    background-color: hsl(0, 0%, 8%);
+    position: absolute;
+    
+}
+
+#menu-hamburger span::after, #menu-hamburger span::before{
+    content:"";
+    position: absolute;
+    border: 2px solid hsl(0, 0%, 8%);
+    width: 40px;
+}
+
+#menu-hamburger span::after{
+    top: 11px;
+}
+
+#menu-hamburger span::before{
+    top: -11px;
+}
+
+header.active #menu-hamburger span{
+    background-color: transparent;
+}
+
+header.active #menu-hamburger span::after, header.active #menu-hamburger span::before{
+    top: 0px;
+    transition: 0.3s;
+}
+
+header.active #menu-hamburger span::after{
+    transform: rotate(46deg);
+}
+
+header.active #menu-hamburger span::before{
+    transform: rotate(-46deg);
+}
+
+#screen-black{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 250;
+}
+
+/*Main -----------------------------------------------------------------------------------*/
+#container{
+    display: flex;
+    padding: 1.5rem 7rem 0rem 5rem;
+    position: relative;
+    gap: 120px;
+}
+
+#sec00{
+    display: none;
+    max-width: 375px;
+    margin: auto;
+}
+
+#sec01{
+    padding: 4.5rem 3rem 0rem 3rem;
+}
+
+#sec01 > h1{
+    font-size: 4rem;
+}
+
+#sec01 > p{
+    max-width: 350px;
+    padding: 3rem 3rem 3rem 0rem;
+    text-align: justify;
+    color: hsl(0, 0%, 41%);
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+}
+
+#sec01 > a{
+    padding: 0.9rem 1.5rem;
+    background-color: hsl(0, 0%, 8%);
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 12px;
+}
+
+#sec01 > a:hover{
+    background-color: white;
+    color: hsl(0, 0%, 8%);
+    border: 1px solid hsl(0, 0%, 8%);
+}
+
+#sec01 > ul{
+    max-width: 400px;
+    position: absolute;
+    bottom: 0px;
+}
+
+#sec02{
+    max-width: 400px;
+}
+
+
+@media (max-width: 1200px){
+    
+    #container{
+        width: 100%;
+        display: block;
+        margin: auto;
+        text-align: center;
+        padding: 0rem;
+    }
+
+    #sec00{
+        display: block;
+    }
+
+    #sec01{
+        padding: 2rem 0rem 0rem 0rem;
+    }
+
+    #sec01 h1{
+        font-size: 2rem;
+    }
+    
+    #sec01 p{
+        margin: auto;
+        text-align: center;
+        padding: 1rem 0rem 2rem;
+    }
+
+    #sec01 ul{
+        margin: auto;
+        position:relative;
+        margin-top: 50px;
+        width: 320px;
+    }
+
+    #sec02{
+        display: none;
+    }
+}
+
+@media (max-width: 880px){
+    header{
+        padding: 1rem;
+    }
+
+    #nav-links{
+        display: none;
+    }
+
+    #menu-hamburger{
+        display: flex;
+    }
+
+    #nav-links{
+        display: none;
+    }
+
+    #nav-links > ul{
+        display: block;
+    }
+
+    #nav-links > ul > li{
+        padding: 0.7rem 0rem;
+    }
+
+    #nav-links #user-info{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #register{
+        width: 100%;
+    }
+
+    header.active #nav-links{
+        display: block;
+        position: absolute;
+        padding: 4.5rem 1.5rem 1rem 1.5rem;
+        width: 220px;
+        height: 100vh;
+        right: 0px;
+        background-color: hsl(0, 0%, 98%);
+        z-index: 500;
+        bottom: 0px;
+        box-sizing: border-box;
+    }
+
+    header.active ~ #screen-black{
+        display: block;
+    }
+
+    .dropdown{
+        display: block;
+    }
+
+    .dropdown.active #company, .dropdown.active #features{
+        position: relative;
+        box-shadow: none;
+        top: 0px;
+        left: 0px;
+        background-color: hsl(0, 0%, 98%);
+        padding-bottom: 0rem;;
+    }
+
+    #company::after{
+        display: none;
+    }
+
+    #register{
+        padding: 0.7rem 3.5rem;
+    }
+
+
+}

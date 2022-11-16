@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <div id="logo">
+        <img src="images/logo.svg" alt="">
+      </div>
+      
+      <div id="nav-links">
+        <ul>
+          <li class="dropdown"onclick="dropdown(0)">
+            <p>Features<span><img src="images/icon-arrow-down.svg" alt=""></span></p>
+            <ul id="features">
+              <li><img src="images/icon-todo.svg" alt="" class="icon"><a href="#">Todo List</a></li>
+              <li><img src="images/icon-calendar.svg" alt="" class="icon"><a href="#" >Calendar</a></li>
+              <li><img src="images/icon-reminders.svg" alt="" class="icon"><a href="#">Reminders</a></li>
+              <li><img src="images/icon-planning.svg" alt="" class="icon"><a href="#">Planning</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown" onclick="dropdown(1)">
+            <p>Company<span><img src="images/icon-arrow-down.svg" alt=""></span></p>
+            <ul id="company">
+              <li><a href="#">History</a></li>
+              <li><a href="#" >Our team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu"><a href="#">Careers</a></li>
+          <li class="nav-menu"><a href="#">About</a></li>
+        </ul>
+        
+        <ul id="user-info">
+          <li class="nav-menu"><a href="#">Login</a></li>
+          <li class="nav-menu"><a href="#" id="register">Register</a></li>
+        </ul>
+      </div>
+      
+    
+      <div id="menu-hamburger" onclick="menuInteractive()">
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <div id="screen-black"></div>
+  
+  <main id="container">
+    <section id="sec00">
+      <img src="images/image-hero-mobile.png" alt="">
+    </section>
+
+    <section id="sec01">
+      <h1>Make remote work</h1>
+
+      <p>
+        Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.
+      </p>
+
+      <a href="#">Learn more</a>
+
+      <ul>
+        <li><img src="images/client-databiz.svg" alt=""></li>
+        <li><img src="images/client-audiophile.svg" alt=""></li>
+        <li><img src="images/client-meet.svg" alt=""></li>
+        <li><img src="images/client-maker.svg" alt=""></li>
+      </ul>
+    </section>
+
+    <section id="sec02">
+      <img src="images/image-hero-desktop.png" alt="">
+    </section>
+  
+  </main>
+  <script src="JS/interactive.js"></script>
+</body>
+</html>
