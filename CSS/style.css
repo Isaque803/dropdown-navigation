@@ -21,11 +21,15 @@ body{
     height: 100vh;
 }
 
+body.active{
+    overflow: hidden;
+}
+
 header{
-    padding: 1rem 3rem 2rem;
+    padding: 2rem 3rem 2rem;
     color: hsl(0, 0%, 41%);
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 header > nav{
@@ -44,7 +48,7 @@ header > nav{
 }
 
 #logo{
-    width: 80px;
+    width: 100px;
 }
 
 ul{
@@ -137,7 +141,7 @@ header a{
 }
 
 .dropdown.active #company{
-    width: 60px;
+    width: 70px;
     display: block;
     background-color: white;
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
@@ -160,7 +164,7 @@ header a{
 
 
 #register{
-    padding: 0.7rem 1rem;
+    padding: 0.7rem 1.2rem;
     border: 1px solid hsl(0, 0%, 41%);
     border-radius: 15px;
 }
@@ -204,20 +208,20 @@ header a{
     top: -11px;
 }
 
-header.active #menu-hamburger span{
+.active #menu-hamburger span{
     background-color: transparent;
 }
 
-header.active #menu-hamburger span::after, header.active #menu-hamburger span::before{
+.active #menu-hamburger span::after, .active #menu-hamburger span::before{
     top: 0px;
     transition: 0.3s;
 }
 
-header.active #menu-hamburger span::after{
+.active #menu-hamburger span::after{
     transform: rotate(46deg);
 }
 
-header.active #menu-hamburger span::before{
+.active #menu-hamburger span::before{
     transform: rotate(-46deg);
 }
 
@@ -236,7 +240,7 @@ header.active #menu-hamburger span::before{
     display: flex;
     padding: 1.5rem 7rem 0rem 5rem;
     position: relative;
-    gap: 120px;
+    gap: 50px;
 }
 
 #sec00{
@@ -246,7 +250,7 @@ header.active #menu-hamburger span::before{
 }
 
 #sec01{
-    padding: 4.5rem 3rem 0rem 3rem;
+    padding: 6rem 3rem 0rem 3rem;
 }
 
 #sec01 > h1{
@@ -255,10 +259,10 @@ header.active #menu-hamburger span::before{
 
 #sec01 > p{
     max-width: 350px;
-    padding: 3rem 3rem 3rem 0rem;
+    padding: 3rem 2rem 3rem 0rem;
     text-align: justify;
     color: hsl(0, 0%, 41%);
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.2rem;
 }
@@ -285,7 +289,7 @@ header.active #menu-hamburger span::before{
 }
 
 #sec02{
-    max-width: 400px;
+    max-width: 450px;
 }
 
 
@@ -324,12 +328,22 @@ header.active #menu-hamburger span::before{
         width: 320px;
     }
 
+    #sec01 a{
+        display: block;
+        width: 100px;
+        margin: auto;
+    }
+
     #sec02{
         display: none;
     }
 }
 
-@media (max-width: 880px){
+@media (max-width: 950px){
+    #container{
+        padding-bottom: 2rem;
+    }
+
     header{
         padding: 1rem;
     }
@@ -340,10 +354,6 @@ header.active #menu-hamburger span::before{
 
     #menu-hamburger{
         display: flex;
-    }
-
-    #nav-links{
-        display: none;
     }
 
     #nav-links > ul{
@@ -363,7 +373,7 @@ header.active #menu-hamburger span::before{
         width: 100%;
     }
 
-    header.active #nav-links{
+    .active #nav-links{
         display: block;
         position: absolute;
         padding: 4.5rem 1.5rem 1rem 1.5rem;
@@ -374,9 +384,19 @@ header.active #menu-hamburger span::before{
         z-index: 500;
         bottom: 0px;
         box-sizing: border-box;
+        animation: anim-transform 0.4s forwards ease-out;
+        transform: translate(100%);
     }
 
-    header.active ~ #screen-black{
+    @keyframes anim-transform {
+        from{
+            transform: translate(100%);
+        }to{
+            transform: translate(0%);
+        }
+    }
+
+    .active > #screen-black{
         display: block;
     }
 
@@ -397,8 +417,9 @@ header.active #menu-hamburger span::before{
         display: none;
     }
 
-    #register{
-        padding: 0.7rem 3.5rem;
+    #register {
+        display: block;
+        box-sizing: border-box;
     }
 
 
